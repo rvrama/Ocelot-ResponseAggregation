@@ -1,0 +1,42 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/content",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/content",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "blog"
+    },
+    {
+      "DownstreamPathTemplate": "/api/comment",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/comment",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "comment"
+    }
+  ],
+  "Aggregates": [
+    {
+      "RouteKeys": [
+        "blog",
+        "comment"
+      ],
+      "UpstreamPathTemplate": "/api/blog"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5151"
+    }
+}
