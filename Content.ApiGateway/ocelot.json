@@ -9,9 +9,9 @@
           "Port": 5001
         }
       ],
-      "UpstreamPathTemplate": "/api/content",
+      "UpstreamPathTemplate": "/blog/content",
       "UpstreamHttpMethod": [ "GET" ],
-      "Key": "blog"
+      "Key": "content"
     },
     {
       "DownstreamPathTemplate": "/api/comment",
@@ -22,7 +22,7 @@
           "Port": 5001
         }
       ],
-      "UpstreamPathTemplate": "/api/comment",
+      "UpstreamPathTemplate": "/blog/comment",
       "UpstreamHttpMethod": [ "GET" ],
       "Key": "comment"
     }
@@ -30,10 +30,10 @@
   "Aggregates": [
     {
       "RouteKeys": [
-        "blog",
+        "content",
         "comment"
       ],
-      "UpstreamPathTemplate": "/api/blog"
+      "UpstreamPathTemplate": "/cms/blog"
     }
   ],
   "GlobalConfiguration": {
