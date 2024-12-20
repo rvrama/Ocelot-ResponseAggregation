@@ -7,6 +7,6 @@
 5. Go to the URL mentioned in the Aggregates section Upstream path for Response Aggregation.
    Visiting http://localhost:5151/cms/blog should return the aggregated response from both /blog/content and /blog/comment
 
-Note: Ratelimiting is also possible through Ocelot as API Gateway.  Follow Ocelot documentation or have a look at APIGatewayEx_ClientConsumer repo
+Note: Ratelimiting is also possible through Ocelot as API Gateway.  Follow Ocelot documentation or have a look at [APIGateway example](https://github.com/rvrama/ApiGateway_Ocelot_dotnetCore) repo
 
    ##Happy Coding
